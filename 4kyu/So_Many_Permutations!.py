@@ -1,3 +1,5 @@
+# Recursion is your friend not your foe
+
 def permutations(s):
     result = set([s])                                    # init set using list
     if len(s) == 2:                                      # base case
