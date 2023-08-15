@@ -22,7 +22,6 @@ def interpret(code):
 
 
     while char != "@":
-        # TODO: HANDLE QUOTES / ASCII Output
         if vertical > 0:
             line -= 1
         elif vertical < 0:
@@ -43,18 +42,10 @@ def interpret(code):
             stack.append(ord(char))
             continue
 
-        print(f'Char: {char}')
-        print(line, index)
-        print(stack)
-        print(output)
-
         if trampoline:
             trampoline = False
             print('BOUNCING')
             continue
-        '''
-'01->1# +# :# 0# g# ,# :# 5# 8# *# 4# +# -# _@'
-		'''
         if char.isnumeric():
             stack.append(int(char))
         elif char == '+':
