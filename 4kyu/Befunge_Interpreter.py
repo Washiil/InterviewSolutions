@@ -5,16 +5,10 @@ def interpret(code):
     stack = []
 
     lines = [[*x] for x in code.split('\n')]
-    for l in lines:
-        print(l)
 
-    char = ' '
-
-    line = 0
-    index = 0
-
-    vertical = 0  # 1 = up, -1 = down, 0 = still
-    horizontal = 1  # 1 = right, -1 = left, 0 = still
+    char = 'None'
+    line, index = 0, 0
+    dx, dy = 1, 0 
 
     first = True
     ascii_mode = False
@@ -22,20 +16,17 @@ def interpret(code):
 
 
     while char != "@":
-        if vertical > 0:
-            line -= 1
-        elif vertical < 0:
-            line += 1
+        if dy > 0:   line -= 1
+        elif dy < 0: line += 1
 
-        if horizontal > 0:
-            index += 1
-        elif horizontal < 0:
-            index -= 1
+        if dx > 0:   index += 1
+        elif dx < 0: index -= 1
 
+        # TODO: Possibly refactor later
         if first:
             first = False
-            line = 0
-            index = 0
+            line, index = 0, 0
+
         char = lines[line][index]
 
         if ascii_mode and char != '"':
@@ -44,10 +35,8 @@ def interpret(code):
 
         if trampoline:
             trampoline = False
-            print('BOUNCING')
             continue
-        if char.isnumeric():
-            stack.append(int(char))
+        if char.isnumeric(): stack.append(int(char))
         elif char == '+':
             a = stack.pop()
             b = stack.pop()
@@ -89,43 +78,43 @@ def interpret(code):
             else:
                 stack.append(0)
         elif char == '>':
-            horizontal = 1
-            vertical = 0
+            dx = 1
+            dy = 0
         elif char == '<':
-            horizontal = -1
-            vertical = 0
+            dx = -1
+            dy = 0
         elif char == '^':
-            vertical = 1
-            horizontal = 0
+            dy = 1
+            dx = 0
         elif char == 'v':
-            vertical = -1
-            horizontal = 0
+            dy = -1
+            dx = 0
         elif char == '?':
             direction = random.randint(0, 3)
-            vertical = 0
-            horizontal = 0
+            dy = 0
+            dx = 0
             if direction == 0:
-                horizontal = 1
+                dx = 1
             elif direction == 1:
-                horizontal = -1
+                dx = -1
             elif direction == 2:
-                vertical = 1
+                dy = 1
             elif direction == 3:
-                vertical = -1
+                dy = -1
         elif char == '_':
             a = stack.pop()
-            vertical = 0
+            dy = 0
             if a == 0:
-                horizontal = 1
+                dx = 1
             else:
-                horizontal = -1
+                dx = -1
         elif char == '|':
             a = stack.pop()
-            horizontal = 0
+            dx = 0
             if a == 0:
-                vertical = -1
+                dy = -1
             else:
-                vertical = 1
+                dy = 1
         elif char == '"':
             ascii_mode = not ascii_mode
         elif char == ':':
@@ -165,7 +154,7 @@ def interpret(code):
     return ' '.join(map(str, output))
 
 
-# print(interpret('>987v>.v\nv456<  :\n>321 ^ _@'))
-# print(interpret('>25*"!dlroW olleH":v\n                v:,_@\n                >  ^\n'))
-# print(interpret('08>:1-:v v *_$.@ \n  ^    _$>\:^'))
-# print(interpret('01->1# +# :# 0# g# ,# :# 5# 8# *# 4# +# -# _@'))
+print(interpret('>987v>.v\nv456<  :\n>321 ^ _@'))
+print(interpret('>25*"!dlroW olleH":v\n                v:,_@\n                >  ^\n'))
+print(interpret('08>:1-:v v *_$.@ \n  ^    _$>\:^'))
+print(interpret('01->1# +# :# 0# g# ,# :# 5# 8# *# 4# +# -# _@'))
