@@ -152,9 +152,3 @@ def interpret(code):
         elif char == ' ':
             continue
     return ' '.join(map(str, output))
-
-
-print(interpret('>987v>.v\nv456<  :\n>321 ^ _@'))
-print(interpret('>25*"!dlroW olleH":v\n                v:,_@\n                >  ^\n'))
-print(interpret('08>:1-:v v *_$.@ \n  ^    _$>\:^'))
-print(interpret('01->1# +# :# 0# g# ,# :# 5# 8# *# 4# +# -# _@'))
