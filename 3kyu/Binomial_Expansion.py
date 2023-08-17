@@ -4,7 +4,6 @@ import math
 def expand(expr):
     # Lets solve this using pascals triangle
     # (ax+b)^n
-    print(expr)
     parts = expr.split('^')
     # (ax+b)  |  n
     exponent = int(parts[1])
@@ -18,15 +17,19 @@ def expand(expr):
             break
         else:
             index += 1
+    
 
-    print(index)
     ax = expression[:index + 1]
+    variable = ax[-1]
+    print(ax[1:-1])
+    asasdada = int(ax[1:-1])
+    # a = int(ax[1:-1]) *  -1 if ax[0] == '-' else int(ax[0:-1])
     b = expression[index + 1:]
 
-    print('FORMATTED')
-    print(ax)
-    print(b)
-    print(exponent)
+    print('\nExpression: ' + expr)
+    print(f'a: {a}')
+    print(f'ax: {ax}')
+    print(f'b:  {b}')
 
     pascal = []
     for i in range(exponent + 1):
