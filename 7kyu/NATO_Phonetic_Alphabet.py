@@ -1,4 +1,4 @@
 # LETTERS is preloaded
 
 def nato(word):
-    return ' '.join([LETTERS[c].title() for c in word.upper()])
+    return ' '.join([LETTERS[c].capitalize() for c in word.upper()])
