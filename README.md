@@ -1,0 +1,2 @@
+# Welcome!
+This repository is essentially just going to be a log book of my coding interview questions. Currently my main language is python3 for these questions but I may branch off into solving them in a few different languages to diversify my applications more effectively.
