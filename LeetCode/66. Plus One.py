@@ -1,4 +1,4 @@
-def plusOne(digits: list[int]) -> list[int]:
+def plusOne(self, digits: list[int]) -> list[int]:
 		x = reversed(digits)
 		
 
