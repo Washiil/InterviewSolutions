@@ -1,4 +1,13 @@
-def binaryTreePaths(self, root: Optional[TreeNode]) -> List[str]:
+from typing import Optional
+
+class TreeNode:
+		def __init__(self) -> None:
+			left: TreeNode
+			val: int
+			right: TreeNode
+
+
+def binaryTreePaths(self, root: Optional[TreeNode]) -> list[str]:
 		res = []
 		def search(child: Optional[TreeNode], path: str):
 				if child.left != None:
