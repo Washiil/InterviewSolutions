@@ -1,4 +1,4 @@
-def majorityElement(self, nums: List[int]) -> List[int]:
+def majorityElement(self, nums: list[int]) -> list[int]:
 		m = len(nums) // 3
 		values = {}
 		for i in nums:
