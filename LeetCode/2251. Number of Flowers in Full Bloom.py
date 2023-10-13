@@ -1,4 +1,4 @@
-def fullBloomFlowers(self, flowers: List[List[int]], people: List[int]) -> List[int]:
+def fullBloomFlowers(self, flowers: list[list[int]], people: list[int]) -> list[int]:
 		big = max(people)
 		frame = []
 		for flower in flowers:
