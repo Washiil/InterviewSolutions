@@ -1,3 +1,6 @@
+# Credit: https://www.youtube.com/watch?v=cfQFu_VDISI
+# Great video that explained this algorithm very well
+
 def minimizeTheDifference(self, mat: list[list[int]], target: int) -> int:
 		@lru_cache(None)
 		def dp(row, ssum):
