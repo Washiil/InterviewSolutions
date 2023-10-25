@@ -1,4 +1,13 @@
-def largestValues(self, root: Optional[TreeNode]) -> List[int]:
+from typing import Optional
+
+class TreeNode:
+		def __init__(self) -> None:
+			left: TreeNode
+			val: int
+			right: TreeNode
+
+
+def largestValues(self, root: Optional[TreeNode]) -> list[int]:
 		depths = []
 		def recur(node: Optional[TreeNode], depth: int) -> int:
 				if len(depths) <= depth:
