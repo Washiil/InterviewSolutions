@@ -6,4 +6,3 @@ class Solution:
             rev_words.append(x[::-1])
 
         return ' '.join(rev_words)
-        

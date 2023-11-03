@@ -1,5 +1,5 @@
 def plusOne(self, digits: list[int]) -> list[int]:
-		x = reversed(digits)
-		
+    x = reversed(digits)
 
-print(plusOne([1,2,3]))
+
+print(plusOne([1, 2, 3]))
