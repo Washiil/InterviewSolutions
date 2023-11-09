@@ -1,4 +1,4 @@
-def eliminateMaximum(self, dist: List[int], speed: List[int]) -> int:
+def eliminateMaximum(self, dist: list[int], speed: list[int]) -> int:
 		delta = []
 		for i in range(len(dist)):
 				delta.append(dist[i] / speed[i])
