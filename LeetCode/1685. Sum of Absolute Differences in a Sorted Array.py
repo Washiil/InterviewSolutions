@@ -1,6 +1,6 @@
 # Credit to solution comes from the editorial
 
-def getSumAbsoluteDifferences(self, nums: List[int]) -> List[int]:
+def getSumAbsoluteDifferences(self, nums: list[int]) -> list[int]:
     n = len(nums)
     prefix = [nums[0]]
     for i in range(1, n):
