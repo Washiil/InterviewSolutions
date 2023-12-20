@@ -1,4 +1,4 @@
-def imageSmoother(self, img: List[List[int]]) -> List[List[int]]:
+def imageSmoother(self, img: list[list[int]]) -> list[list[int]]:
     rows = len(img)
     cols = len(img[0])
 
