@@ -1,3 +1,6 @@
+# Another dynamic programming problem that I really struggled with and had to look at solutions for
+# Im thinking I will watch some course videos and figure out the approach I need to solve them
+
 def numRollsToTarget(self, n: int, k: int, target: int) -> int:
     mod = 10**9 + 7
 
