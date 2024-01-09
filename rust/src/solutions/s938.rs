@@ -1,6 +1,6 @@
+use crate::solutions::utils::TreeNode;
 use std::cell::RefCell;
 use std::rc::Rc;
-use crate::solutions::utils::TreeNode;
 
 struct Solution;
 
@@ -23,7 +23,7 @@ impl Solution {
                 output += Solution::range_sum_bst(node_ref.right.clone(), low, high);
             }
 
-            return output
+            return output;
         } else {
             return 0;
         }
@@ -31,8 +31,8 @@ impl Solution {
 }
 
 mod tests {
-    use crate::solutions::utils::TreeNode;
     use crate::solutions::s938::Solution;
+    use crate::solutions::utils::TreeNode;
     use std::cell::RefCell;
     use std::rc::Rc;
 
@@ -48,7 +48,6 @@ mod tests {
         let left_grandchild = Rc::new(RefCell::new(TreeNode::new(3)));
         let left_right_grandchild = Rc::new(RefCell::new(TreeNode::new(7)));
         let right_grandchild = Rc::new(RefCell::new(TreeNode::new(18)));
-
 
         left_child.borrow_mut().left = Some(left_grandchild.clone());
         left_child.borrow_mut().right = Some(left_right_grandchild.clone());
