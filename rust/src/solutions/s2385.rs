@@ -1,12 +1,16 @@
-use std::rc::Rc;
+use crate::solutions::utils::TreeNode;
 use std::cell::RefCell;
 use std::collections::{HashMap, HashSet};
-use crate::solutions::utils::TreeNode;
+use std::rc::Rc;
 
 struct Solution;
 
 impl Solution {
-    pub fn convert(root: Option<Rc<RefCell<TreeNode>>>, parent: i32, tree_map: &mut HashMap<i32, HashSet<i32>>) {
+    pub fn convert(
+        root: Option<Rc<RefCell<TreeNode>>>,
+        parent: i32,
+        tree_map: &mut HashMap<i32, HashSet<i32>>,
+    ) {
         match root {
             Some(node) => {
                 let node_ref = node.borrow();
@@ -28,8 +32,5 @@ impl Solution {
             }
             None => {}
         }
-    }
-    pub fn amount_of_time(root: Option<Rc<RefCell<TreeNode>>>, start: i32) -> i32 {
-
     }
 }
