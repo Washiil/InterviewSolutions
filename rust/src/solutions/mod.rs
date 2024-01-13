@@ -7,3 +7,4 @@ mod s872;
 mod s938;
 mod utils;
 mod s1704;
+mod s1347;
