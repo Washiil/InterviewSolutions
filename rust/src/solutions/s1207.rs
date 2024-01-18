@@ -21,7 +21,7 @@ mod tests {
 
     #[test]
     fn test1() {
-        let input = vec![1,2,2,1,1,3];
+        let input = vec![1, 2, 2, 1, 1, 3];
         assert_eq!(Solution::unique_occurrences(input), true)
     }
 
@@ -33,7 +33,7 @@ mod tests {
 
     #[test]
     fn test3() {
-        let input = vec![-3,0,1,-3,1,1,1,-3,10,0];
+        let input = vec![-3, 0, 1, -3, 1, 1, 1, -3, 10, 0];
         assert_eq!(Solution::unique_occurrences(input), true)
     }
 }
