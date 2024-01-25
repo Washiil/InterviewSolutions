@@ -8,8 +8,7 @@ impl Solution {
             let count = nums.iter().filter(|&n| *n == i as i32).count();
             if count == 2 {
                 duplicate = i as i32;
-            }
-            else if count == 0 {
+            } else if count == 0 {
                 missing = i as i32;
             };
         }
@@ -22,13 +21,13 @@ mod tests {
     use super::*;
     #[test]
     fn test1() {
-        let input = vec![1,2,2,4];
-        assert_eq!(Solution::find_error_nums(input), vec![2,3]);
+        let input = vec![1, 2, 2, 4];
+        assert_eq!(Solution::find_error_nums(input), vec![2, 3]);
     }
 
     #[test]
     fn test2() {
-        let input = vec![1,1];
-        assert_eq!(Solution::find_error_nums(input), vec![1,2]);
+        let input = vec![1, 1];
+        assert_eq!(Solution::find_error_nums(input), vec![1, 2]);
     }
 }
