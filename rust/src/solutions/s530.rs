@@ -1,8 +1,7 @@
+use crate::solutions::utils::TreeNode;
 use std::cell::RefCell;
 use std::rc::Rc;
-use crate::solutions::utils::TreeNode;
 
-use std::collections::HashMap;
 use std::cmp;
 
 struct Solution;
@@ -28,7 +27,5 @@ impl Solution {
 }
 
 mod tests {
-    use super::*;
-
     // Working on a better test constructor
 }
