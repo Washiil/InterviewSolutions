@@ -16,12 +16,3 @@ def count_horses(sound_str: str) -> List[int]:
 
 
     return horses
-
-print('Calculating Horses')
-print(count_horses('0111020111'))
-'''
-0111020111
-0010010010
-
-should return [2, 3].
-'''
