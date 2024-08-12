@@ -1,3 +1,4 @@
+mod s3;
 mod s1026;
 mod s1143;
 mod s1207;
