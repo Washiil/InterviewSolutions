@@ -1,4 +1,6 @@
 mod s3;
+mod s78;
+mod s860;
 mod s202;
 mod s1026;
 mod s1143;
