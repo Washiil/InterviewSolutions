@@ -19,6 +19,7 @@ mod s530;
 mod s145;
 mod s645;
 mod s70;
+mod s874;
 mod s872;
 mod s938;
 mod s997;
