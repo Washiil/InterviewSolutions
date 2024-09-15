@@ -16,6 +16,7 @@ mod s2870;
 mod s300;
 mod s380;
 mod s136;
+mod s2419;
 mod s530;
 mod s145;
 mod s645;
