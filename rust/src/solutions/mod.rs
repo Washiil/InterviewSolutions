@@ -32,4 +32,5 @@ mod s771;
 mod s884;
 mod s3217;
 mod s2807;
+mod s3043;
 mod utils;
