@@ -30,6 +30,7 @@ mod s874;
 mod s872;
 mod s938;
 mod s997;
+mod s921;
 mod s771;
 mod s884;
 mod s3217;
