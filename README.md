@@ -9,10 +9,7 @@ The repository is organized by problem type and platform for easier navigation. 
 
 ### Folder Details:
 
-- `rust/`: Rust-based solutions for both LeetCode and Codewars.
-- `python/`: Python-based solutions for both LeetCode and Codewars.
-
-For quick reference, each problem-solution file is named based on the problem number or title.
+Each folder contains solutions in their respective language. Due to the package managment of certain languages they will contain subfolders or simply files for each problem. All problems are labeled by their number with leading zeros for sorting.
 
 ## 📺 Platforms
 
@@ -31,7 +28,9 @@ Python is a go-to for many people solving coding problems, especially in an inte
 Rust is a systems programming language focusing on safety, performance, and concurrency. It is ideal for writing efficient and reliable solutions to algorithmic problems. I opted to solve a lot of problems in Rust after Python as a way to continually understand the language and often understand some of the data structures on a deeper level due to the verbose nature of Rust code.
 
 ## 🚩 Future Goals 
-- [ ] Implement better standardization between all of my solutions
-- [ ] Add more languages (Java/C/C++)
+- [ x ] Implement better standardization between all of my solutions
+- [ x ] Add Golang Support
+- [ ] Add Kotlin
+- [ ] Add C/C++
 - [ ] Perhaps add some benchmarking capabilities for my solutions (Long Term)
 - [ ] Add a counter (push action?) to update the number of problems solved in the readme
