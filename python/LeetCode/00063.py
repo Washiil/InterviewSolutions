@@ -15,12 +15,14 @@ def uniquePathsWithObstacles(self, obstacleGrid: List[List[int]]) -> int:
             # Obstacle check leave 0
             if obstacleGrid[i][j] == 1:
                 continue
+            if i == 0 and j == 0:
+                continue
 
-            if i == 0 and j > 0:
+            if i == 0:
                 board[i][j] = board[i][j-1]
-            elif j == 0 and i > 0:
+            elif j == 0:
                 board[i][j] = board[i-1][j]
-            elif j > 0 and i > 0:
+            else:
                 board[i][j] = board[i-1][j] + board[i][j-1]
 
     return board[m-1][n-1]
