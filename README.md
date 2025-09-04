@@ -21,7 +21,7 @@ Codewars focuses on various Kata challenges where users are trained to improve t
 
 ## 📂 Languages
 
-### Python
+### Python 🐍
 Python is a go-to for many people solving coding problems, especially in an interview scenario. Thus, I want to make sure I am confident in my ability to implement many solutions in Python efficiently and quickly.
 
 ### Rust 🦀
