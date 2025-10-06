@@ -33,6 +33,13 @@ class Solution:
         t = 0
         n = len(grid)
 
+        lower, upper = 0, 0, 0
+
+        for i in range(n):
+            for j in range(n):
+                lower = min(lower, grid[i][j])
+                upper = max(upper, grid[i][j])
+
         mins = []
         for i in range(1, n-1):
             mins.append(min(grid[i]))
@@ -41,12 +48,13 @@ class Solution:
         if len(mins) > 0:
             t += max(mins)
         
-
-        while True:
+        while lower < upper:
+            mid = (lower + upper) // 2
             visited = [[0 for _ in range(n)] for _ in range(n)]
             if self.dfs(0, 0, grid, visited, t):
-                return t
+                t = mid
+                upper = mid-1
+            else:
+                lower = mid+1
 
-            t += 1
-
-        return -1
+        return t
