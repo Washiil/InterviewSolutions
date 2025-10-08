@@ -4,11 +4,17 @@ def successfulPairs(self, spells: List[int], potions: List[int], success: int) -
 
     output = [0 for _ in range(n)]
 
-    for i in range(n):
-        spell = spells[i]
+    @lru_cache
+    def compute_combos(idx: int) -> int:
+        count = 0
+        spell = spells[idx]
         for j in range(m):
             v = potions[j] * spell
             if v >= success:
-                output[i] += 1
+                count += 1
+        return count
+
+    for i in range(n):
+        output[i] = compute_combos(i)
     
     return output
