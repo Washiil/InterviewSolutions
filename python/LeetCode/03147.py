@@ -1,14 +1,11 @@
 def maximumEnergy(self, energy: List[int], k: int) -> int:
-    max_energy = sum([abs(x) for x in energy]) * -1
     n = len(energy)
+    dp = [0 for _ in range(n)]
 
-    for start in range(n):
-        idx = start
-        current_energy = 0
-        while idx < n:
-            current_energy += energy[idx]
-            idx += k
-        
-        max_energy = max(max_energy, current_energy)
+    for start in range(n-1, -1, -1):
+        if start + k > n-1:
+            dp[start] = energy[start]
+        else:
+            dp[start] = energy[start] + dp[start + k]
     
-    return max_energy
+    return max(dp)
