@@ -1,13 +1,10 @@
+# Lovely counting approach https://leetcode.com/problems/check-if-digits-are-equal-in-string-after-operations-i/solutions/7293347/from-brute-force-to-o-n-3-solutions-with-gradual-optimizations/
+
 def hasSameDigits(self, s: str) -> bool:
     lst = [int(v) for v in s]
-    while len(lst) != 2:
-        nums = [int(v) for v in lst]
-        out = []
-        for i in range(0, len(lst)-1):
-            out.append((nums[i] + nums[i+1]) % 10)
-        
-        lst = out
-    
-    if lst[0] == lst[1]:
-        return True
-    return False
+    n = len(lst)
+    binomial_coeff = [comb(n-2,i) for i in range(n-1)] 
+    left = sum([digit*coeff for digit, coeff in zip(lst[:-1], binomial_coeff)]) % 10
+    right = sum([digit*coeff for digit, coeff in zip(lst[1:], binomial_coeff)]) % 10
+
+    return left == right
