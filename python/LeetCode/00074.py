@@ -15,11 +15,11 @@ def searchMatrix(self, matrix: List[List[int]], target: int) -> bool:
 
         guess = matrix[row][col]
 
-        if guess > target:
+        if guess == target:
+            return True
+        elif guess > target:
             high = mid - 1
         elif guess < target:
             low = mid + 1
-        elif guess == target:
-            return True
 
     return False
