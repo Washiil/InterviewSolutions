@@ -1,12 +1,9 @@
 def numSub(self, s: str) -> int:
     result = 0
-    count = 0
 
-    for c in s:
-        if c == '1':
-            count += 1
-            result = (result + count) % ((10 ** 9) + 7)
-        else:
-            count = 0
+    segments = s.split('0')
+    for seg in segments:
+        n = len(seg)
+        result += int(n * (n + 1)/2)
     
-    return result
+    return result % ((10 ** 9) + 7)
