@@ -8,4 +8,4 @@ def longestPalindrome(self, s: str) -> str:
             if check(start, start + end):
                 return s[start:start + end]
 
-    return ""
+    return None
