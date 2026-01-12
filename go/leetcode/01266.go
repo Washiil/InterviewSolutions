@@ -1,3 +1,5 @@
+package main
+
 func intAbs(val int) int {
 	if val < 0 {
 		return val * -1
