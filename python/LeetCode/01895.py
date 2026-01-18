@@ -16,6 +16,9 @@ def largestMagicSquare(self, grid: List[List[int]]) -> int:
                 valid = False
                 break
 
+        if not valid:
+            return False
+
         for offset in range(size):
             tmp = 0
             for idx in range(size):
@@ -23,6 +26,9 @@ def largestMagicSquare(self, grid: List[List[int]]) -> int:
             if tmp != area:
                 valid = False
                 break
+
+        if not valid:
+            return False
 
         diag1 = 0
         diag2 = 0
@@ -32,12 +38,18 @@ def largestMagicSquare(self, grid: List[List[int]]) -> int:
 
         if diag1 != area or diag2 != area:
             valid = False
+
         return valid
 
     for size in range(min(m, n)):
+        valid_size = False
         for row in range(m - size):
+            if valid_size:
+                break
             for col in range(n - size):
                 if check_box(row, col, size + 1):
                     largest_area = size + 1
+                    valid_size = True
+                    break
 
     return largest_area
