@@ -1,3 +1,5 @@
+package main
+
 func canBeEqual(s1 string, s2 string) bool {
 	// Even indices
 	evenMatch := (s1[0] == s2[0] && s1[2] == s2[2]) || (s1[0] == s2[2] && s1[2] == s2[0])
