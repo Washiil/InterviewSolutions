@@ -13,6 +13,9 @@ def twoEditWords(self, queries: List[str], dictionary: List[str]) -> List[str]:
                 if queries[i][k] != dictionary[j][k]:
                     edits += 1
 
+                if edits > 2:
+                    break
+
             if edits <= 2:
                 output.append(queries[i])
                 break
